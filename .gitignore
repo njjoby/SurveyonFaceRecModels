@@ -1,0 +1,47 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# CASIA-WebFace datasets and MXNet RecordIO files
+/CASIA-WebFace/
+/CASIA-WebFace-10K/
+/CASIA-WebFace-20K/
+/CASIA-WebFace-400K/
+/CASIA-WebFace-MAX/
+#/CASIA-WebFace-small/
+*.rec
+*.idx
+
+# Generated embedding arrays and evaluation outputs
+/Embeddings/
+/embeddings/
+/Embeddings Generated*/
+*.working.npy
+/query_metrics_results.txt
+
+# Downloaded model weights
+*.onnx
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Local test images and runtime logs
+/input/
+/test_face.jpg
+*.log
