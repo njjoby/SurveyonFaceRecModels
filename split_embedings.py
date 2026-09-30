@@ -1,17 +1,30 @@
 import numpy as np
 import os
+import argparse
+
+
+parser = argparse.ArgumentParser(
+    description="Split embeddings into reference and remaining sets, identity-wise."
+)
+parser.add_argument(
+    "embeddings_path",
+    help="Path to the embeddings .npy file (the matching labels file must be alongside it).",
+)
+args = parser.parse_args()
 
 # ============================================================
 # LOAD EMBEDDINGS AND LABELS
 # ============================================================
 
-embeddings = np.load(
-    "Embeddings Generated/CASIA-WebFace-MAX/arcface_embeddings.npy"
-)
+embeddings_path = args.embeddings_path
+labels_path = embeddings_path.replace("_embeddings.npy", "_labels.npy")
 
-labels = np.load(
-    "Embeddings Generated/CASIA-WebFace-MAX/arcface_labels.npy"
-)
+if labels_path == embeddings_path:
+    parser.error("embeddings_path must end with '_embeddings.npy'")
+
+embeddings = np.load(embeddings_path)
+
+labels = np.load(labels_path)
 
 print("Original embeddings shape:", embeddings.shape)
 print("Original labels shape:", labels.shape)
@@ -21,7 +34,7 @@ print("Original labels shape:", labels.shape)
 # OUTPUT DIRECTORY
 # ============================================================
 
-output_dir = "Embeddings Generated/CASIA-WebFace-MAX/Split"
+output_dir = os.path.join(os.path.dirname(embeddings_path), "Split")
 
 os.makedirs(output_dir, exist_ok=True)
 

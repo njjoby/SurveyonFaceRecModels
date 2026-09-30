@@ -26,13 +26,16 @@ __pycache__/
 #/CASIA-WebFace-small/
 *.rec
 *.idx
+!CASIA-WebFace-small/train.idx
+!CASIA-WebFace-small/train.rec
 
 # Generated embedding arrays and evaluation outputs
 /Embeddings/
 /embeddings/
-/Embeddings Generated*/
+#/Embeddings Generated*/
 *.working.npy
-/query_metrics_results.txt
+*.npy
+#/query_metrics_results.txt
 
 # Downloaded model weights
 *.onnx

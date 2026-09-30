@@ -1,0 +1,109 @@
+Loading embeddings...
+
+[Load embeddings and labels] Section time: 00:00:00 | Total elapsed: 00:00:00 (hh:mm:ss)
+
+Dataset information:
+Query embeddings: (100, 512)
+Query labels: (100,)
+Gallery embeddings: (400, 512)
+Gallery labels: (400,)
+
+Normalizing embeddings...
+
+[Normalize embeddings] Section time: 00:00:00 | Total elapsed: 00:00:00 (hh:mm:ss)
+
+Calculating cosine similarity...
+Similarity matrix: (100, 400)
+
+[Calculate cosine similarity] Section time: 00:00:00 | Total elapsed: 00:00:00 (hh:mm:ss)
+
+Calculating Rank-1 to Rank-20...
+
+[Sort gallery by similarity] Section time: 00:00:00 | Total elapsed: 00:00:00 (hh:mm:ss)
+
+Calculating MRR and mAP...
+MRR: 0.879335
+mAP: 0.778188
+
+[Calculate MRR and mAP] Section time: 00:00:00 | Total elapsed: 00:00:00 (hh:mm:ss)
+
+Calculating TAR@FAR curve...
+TAR@FAR values saved as:
+/home/cse/JobyProjects/SurveryOnFacerecognitionModels/Embeddings Generated FaceNet/CASIA-WebFace-small/Split/TAR_FAR_Values.txt
+TAR@FAR curve saved as:
+/home/cse/JobyProjects/SurveryOnFacerecognitionModels/Embeddings Generated FaceNet/CASIA-WebFace-small/Split/TAR_FAR_Curve.png
+
+[Calculate and save TAR@FAR] Section time: 00:00:01 | Total elapsed: 00:00:01 (hh:mm:ss)
+Rank-1: 86.00%
+Rank-2: 88.00%
+Rank-3: 89.00%
+Rank-4: 90.00%
+Rank-5: 90.00%
+Rank-6: 90.00%
+Rank-7: 90.00%
+Rank-8: 90.00%
+Rank-9: 90.00%
+Rank-10: 90.00%
+Rank-11: 90.00%
+Rank-12: 90.00%
+Rank-13: 90.00%
+Rank-14: 91.00%
+Rank-15: 91.00%
+Rank-16: 92.00%
+Rank-17: 92.00%
+Rank-18: 92.00%
+Rank-19: 92.00%
+Rank-20: 92.00%
+
+[Calculate CMC ranks] Section time: 00:00:00 | Total elapsed: 00:00:01 (hh:mm:ss)
+
+==========================================
+CMC Results
+==========================================
+Rank      Accuracy       
+------------------------------------------
+1         86.00%
+2         88.00%
+3         89.00%
+4         90.00%
+5         90.00%
+6         90.00%
+7         90.00%
+8         90.00%
+9         90.00%
+10        90.00%
+11        90.00%
+12        90.00%
+13        90.00%
+14        91.00%
+15        91.00%
+16        92.00%
+17        92.00%
+18        92.00%
+19        92.00%
+20        92.00%
+==========================================
+
+[Print CMC table] Section time: 00:00:00 | Total elapsed: 00:00:01 (hh:mm:ss)
+
+Precision@K Curve saved as:
+/home/cse/JobyProjects/SurveryOnFacerecognitionModels/Embeddings Generated FaceNet/CASIA-WebFace-small/Split/Precision_at_K_Curve.png
+Precision@K Curve values saved as:
+/home/cse/JobyProjects/SurveryOnFacerecognitionModels/Embeddings Generated FaceNet/CASIA-WebFace-small/Split/Precision_at_K_Values.txt
+
+Recall@K Curve saved as:
+/home/cse/JobyProjects/SurveryOnFacerecognitionModels/Embeddings Generated FaceNet/CASIA-WebFace-small/Split/Recall_at_K_Curve.png
+Recall@K Curve values saved as:
+/home/cse/JobyProjects/SurveryOnFacerecognitionModels/Embeddings Generated FaceNet/CASIA-WebFace-small/Split/Recall_at_K_Values.txt
+
+[Calculate and save Recall@K and Precision@K] Section time: 00:00:00 | Total elapsed: 00:00:02 (hh:mm:ss)
+
+CMC curve saved as:
+/home/cse/JobyProjects/SurveryOnFacerecognitionModels/Embeddings Generated FaceNet/CASIA-WebFace-small/Split/CMC_Curve.png
+
+[Plot and save CMC curve] Section time: 00:00:00 | Total elapsed: 00:00:02 (hh:mm:ss)
+
+Results saved to:
+/home/cse/JobyProjects/SurveryOnFacerecognitionModels/Embeddings Generated FaceNet/CASIA-WebFace-small/Split/query_metrics_results.txt
+
+Elapsed time: 00:00:02 (hh:mm:ss)

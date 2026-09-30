@@ -1,0 +1,67 @@
+Loading embeddings...
+
+Dataset information:
+Query embeddings: (1000, 512)
+Query labels: (1000,)
+Gallery embeddings: (9000, 512)
+Gallery labels: (9000,)
+
+Normalizing embeddings...
+
+Calculating cosine similarity...
+Similarity matrix: (1000, 9000)
+
+Calculating Rank-1 to Rank-20...
+Rank-1: 95.60%
+Rank-2: 95.90%
+Rank-3: 96.00%
+Rank-4: 96.10%
+Rank-5: 96.10%
+Rank-6: 96.10%
+Rank-7: 96.10%
+Rank-8: 96.10%
+Rank-9: 96.10%
+Rank-10: 96.10%
+Rank-11: 96.10%
+Rank-12: 96.10%
+Rank-13: 96.10%
+Rank-14: 96.10%
+Rank-15: 96.10%
+Rank-16: 96.10%
+Rank-17: 96.10%
+Rank-18: 96.10%
+Rank-19: 96.10%
+Rank-20: 96.10%
+
+==========================================
+CMC Results
+==========================================
+Rank      Accuracy       
+------------------------------------------
+1         95.60%
+2         95.90%
+3         96.00%
+4         96.10%
+5         96.10%
+6         96.10%
+7         96.10%
+8         96.10%
+9         96.10%
+10        96.10%
+11        96.10%
+12        96.10%
+13        96.10%
+14        96.10%
+15        96.10%
+16        96.10%
+17        96.10%
+18        96.10%
+19        96.10%
+20        96.10%
+==========================================
+
+CMC curve saved as:
+/home/cse/JobyProjects/SurveryOnFacerecognitionModels/CMC_Curve_Rank1_Rank20.png
+
+Results saved to:
+/home/cse/JobyProjects/SurveryOnFacerecognitionModels/query_metrics_results.txt

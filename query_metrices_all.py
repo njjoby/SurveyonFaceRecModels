@@ -4,6 +4,7 @@ import sys
 import os
 import time
 import gc
+import argparse
 
 START_TIME = time.perf_counter()
 
@@ -12,21 +13,32 @@ START_TIME = time.perf_counter()
 # Configuration
 # ============================================================
 
-REFERENCE_EMBEDDINGS = "Embeddings Generated/CASIA-WebFace-400K/Split/reference_embeddings.npy"
-REFERENCE_LABELS = "Embeddings Generated/CASIA-WebFace-400K/Split/reference_labels.npy"
 
-GALLERY_EMBEDDINGS = "Embeddings Generated/CASIA-WebFace-400K/Split/remaining_embeddings.npy"
-GALLERY_LABELS = "Embeddings Generated/CASIA-WebFace-400K/Split/remaining_labels.npy"
 
-CMC_FILE = "Embeddings Generated/CASIA-WebFace-400K/Split/CMC_Curve.png"
-TAR_FAR_FILE = "Embeddings Generated/CASIA-WebFace-400K/Split/TAR_FAR_Curve.png"
-TAR_FAR_VALUES_FILE = "Embeddings Generated/CASIA-WebFace-400K/Split/TAR_FAR_Values.txt"
-RECALL_AT_K_PLOT_FILE = "Embeddings Generated/CASIA-WebFace-400K/Split/Recall_at_K_Curve.png"
-RECALL_AT_K_VALUES_FILE = "Embeddings Generated/CASIA-WebFace-400K/Split/Recall_at_K_Values.txt"
-PRECISION_AT_K_PLOT_FILE = "Embeddings Generated/CASIA-WebFace-400K/Split/Precision_at_K_Curve.png"
-PRECISION_AT_K_VALUES_FILE = "Embeddings Generated/CASIA-WebFace-400K/Split/Precision_at_K_Values.txt"
+parser = argparse.ArgumentParser(
+    description="Calculate retrieval metrics using a reference embeddings file."
+)
+parser.add_argument(
+    "reference_embeddings",
+    help="Path to reference_embeddings.npy; matching labels and remaining files must be in the same directory.",
+)
+args = parser.parse_args()
 
-OUTPUT_FILE = "Embeddings Generated/CASIA-WebFace-400K/Split/query_metrics_results.txt"
+output_dir = os.path.dirname(os.path.abspath(args.reference_embeddings))
+REFERENCE_EMBEDDINGS = args.reference_embeddings
+REFERENCE_LABELS = os.path.join(output_dir, "reference_labels.npy")
+GALLERY_EMBEDDINGS = os.path.join(output_dir, "remaining_embeddings.npy")
+GALLERY_LABELS = os.path.join(output_dir, "remaining_labels.npy")
+
+CMC_FILE = os.path.join(output_dir, "CMC_Curve.png")
+TAR_FAR_FILE = os.path.join(output_dir, "TAR_FAR_Curve.png")
+TAR_FAR_VALUES_FILE = os.path.join(output_dir, "TAR_FAR_Values.txt")
+RECALL_AT_K_PLOT_FILE = os.path.join(output_dir, "Recall_at_K_Curve.png")
+RECALL_AT_K_VALUES_FILE = os.path.join(output_dir, "Recall_at_K_Values.txt")
+PRECISION_AT_K_PLOT_FILE = os.path.join(output_dir, "Precision_at_K_Curve.png")
+PRECISION_AT_K_VALUES_FILE = os.path.join(output_dir, "Precision_at_K_Values.txt")
+
+OUTPUT_FILE = os.path.join(output_dir, "query_metrics_results.txt")
 
 MAX_RANK = 20
 
